@@ -24,9 +24,9 @@ function fadeIn(element) {
 }
 
 function load() {
-    var home = document.getElementById("home");
-    home.opacity = 0.0;
-    id = setInterval(fadeIn, 10, home);
+    var main = document.getElementById("main");
+    main.opacity = 0.0;
+    id = setInterval(fadeIn, 10, main);
 }
 
 window.onscroll = scroll;

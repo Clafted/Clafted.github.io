@@ -42,7 +42,7 @@ footer {
     size: 10%;
 }
 
-#home {
+.home {
     width: 100%;
     min-height: 15cm;
     z-index: 2;
@@ -52,7 +52,7 @@ footer {
     justify-items: center;
 }
 
-#home p {
+.home p {
     font-size: 30px;
     line-height: 40px;
     text-align: justify;
@@ -63,8 +63,10 @@ footer {
 #main {
     border: 0;
     margin: 0;
-    padding: 1cm;
-    padding-top: 2cm;
+    z-index: 2;
+    position:relative;
+    background-color: rgba(24, 27, 37, 0.747);
+    padding: 2cm 0;
     align-content: center;
 }
 
@@ -83,6 +85,10 @@ h1 {
 
 h2 {
     font-size: 50px;
+}
+
+#projects {
+    padding-left: 2cm;
 }
 
 #projects div {
