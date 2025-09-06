@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(100, 149, 196);
-    color: rgb(255, 255, 255);
+    background-color: rgb(27, 45, 61);
+    color: rgb(216, 235, 251, 0.9);
     font-family:sans-serif;
     overflow-x: hidden;
     padding: 0;
@@ -50,8 +50,8 @@ footer {
 }
 
 #home p {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 40px;
     text-align: justify;
     width: 65%;
 }
@@ -64,18 +64,25 @@ footer {
     align-content: center;
 }
 
-#background_image {
+#background_media {
     z-index: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     top: 0;
     position: fixed;
 }
 
 #projects div {
     width: 85%;
-    border-bottom: 0.1cm solid rgb(234, 251, 255);
-    padding: 1cm 1cm;
+    border-bottom: 0.1cm solid rgb(216, 235, 251, 0.9);
+    padding: 0 1cm 1cm 1cm;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 70px;
+}
+
+#projects img {
+    border: 2px solid rgb(216, 235, 251, 0.9);
 }

@@ -3,21 +3,10 @@
     <head>
         <title>Noah Miguel Perez | Home</title>
         <link rel="stylesheet" type="text/css" href="./style.css">
-        <script>
-            let scrollval = 0.0;
-            let prevY = 100.0;
-            
-            window.onscroll = function() {
-                var delta = (prevY - window.scrollY) * 0.5;
-                scrollval = Math.max(0, Math.min(100, scrollval+delta));
-                console.log(scrollval/100.0);
-                document.getElementById("directory").style.backgroundColor = "rgba(4, 25, 45, " + scrollval/100.0 + ")";
-                prevY = window.scrollY;
-            }
-        </script>
+        <script src="script.js"></script>
     </head>
     <body>
-        <img id="background_image" src="images/ATimg.png">
+        <video id="background_media" src="videos/at.mp4" muted autoplay loop></video>
         <div id="directory">
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
@@ -31,7 +20,7 @@
             </p>
         </div>    
         <footer>
-            <a href="https://github.com/Clafted"><img src="./images/github_logo.png" width="4%"></a>
+            <a href="https://github.com/Clafted"><img src="./images/github_logo.png" height="50%"></a>
         </footer>
     </body>
 </html>
