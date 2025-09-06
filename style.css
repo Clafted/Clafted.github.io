@@ -1,34 +1,81 @@
 body {
     background-color: rgb(100, 149, 196);
-    color: rgb(4, 10, 35);
+    color: rgb(255, 255, 255);
     font-family:sans-serif;
+    overflow-x: hidden;
     padding: 0;
+    border: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#directory, footer {
+    align-content: center;
+    background-color: rgba(4, 25, 45);
+    width: 100%;
+    height: 2cm;
+    z-index: 3;
     border: 0;
     margin: 0;
 }
 
-#directory, footer {
-    background-color: rgb(15, 23, 65);
-    height: 2cm;
-    padding: 1cm auto;
-    margin: 0;
+#directory {
+    top: 0;
+    left: 0;
+    position: fixed;
+}
 
+#directory *, footer * {
+    margin-left: 2%;
+}
+
+footer {
+    position: relative;
 }
 
 #directory a {
-    margin: 0.5cm auto;
     color: white;
     text-decoration: none;
     size: 10%;
 }
 
-#projects {
+#home {
+    width: 100%;
+    min-height: 15cm;
+    z-index: 2;
+    position: relative;
+    background-color: rgba(24, 27, 37, 0.747);
+    padding-top: 2cm;
+    justify-items: center;
+}
+
+#home p {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    width: 65%;
+}
+
+#main {
+    border: 0;
     margin: 0;
+    padding: 1cm;
+    padding-top: 2cm;
+    align-content: center;
+}
+
+#background_image {
+    z-index: 1;
+    top: 0;
+    position: fixed;
 }
 
 #projects div {
     width: 85%;
     border-bottom: 0.1cm solid rgb(234, 251, 255);
-    margin: 0 auto 1cm auto;
-    padding: 1cm 0cm;
+    padding: 1cm 1cm;
+}
+
+h1 {
+    font-size: 50px;
 }

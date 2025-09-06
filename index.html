@@ -2,14 +2,36 @@
 <html>
     <head>
         <title>Noah Miguel Perez | Home</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script>
+            let scrollval = 0.0;
+            let prevY = 100.0;
+            
+            window.onscroll = function() {
+                var delta = (prevY - window.scrollY) * 0.5;
+                scrollval = Math.max(0, Math.min(100, scrollval+delta));
+                console.log(scrollval/100.0);
+                document.getElementById("directory").style.backgroundColor = "rgba(4, 25, 45, " + scrollval/100.0 + ")";
+                prevY = window.scrollY;
+            }
+        </script>
     </head>
     <body>
-        <div id="directoy">
+        <img id="background_image" src="images/ATimg.png">
+        <div id="directory">
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
         </div>
-        <div>
-            <h1>Welcome!</h1>
-        </div>
+        <div id="home">
+            <h1 id="welcome">Welcome!</h1>
+            <p>I (Noah Miguel Perez) am pursuing Computer Science. Particularly, I'm particularly interested in
+                the field of Computer Graphics. Why? Well, with simulations, you can test all sorts of experiments
+                (at least those which you can replicate) without the expense and hazard of materials. Of course, 
+                there are limitations, but part of my interest in CG is to advance simulation technologies.
+            </p>
+        </div>    
+        <footer>
+            <a href="https://github.com/Clafted"><img src="./images/github_logo.png" width="4%"></a>
+        </footer>
     </body>
 </html>
