@@ -2,13 +2,13 @@ body {
     background-color: rgb(27, 45, 61);
     color: rgb(216, 235, 251, 0.9);
     font-family:sans-serif;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 0.4cm;
+    line-height: 0.5cm;
     overflow-x: hidden;
     padding: 0;
     border: 0;
     margin: 0;
-    height: 100%;
+    min-height: 1vh;
 }
 
 #directory, footer {
@@ -53,8 +53,8 @@ footer {
 }
 
 .home p {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 0.8cm;
+    line-height: 1cm;
     text-align: justify;
     padding-bottom: 2cm;
     width: 65%;
@@ -80,23 +80,22 @@ footer {
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 1.5cm;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 1.2cm;
 }
 
 #projects {
     padding-left: 2cm;
 }
 
-#projects div {
-    width: 85%;
+div .project {
+    width: 70%;
     border-bottom: 0.1cm solid rgb(216, 235, 251, 0.9);
     padding: 0 1cm 1cm 1cm;
 }
-
 
 #projects img, #projects video {
     border: 2px solid rgb(216, 235, 251, 0.9);
@@ -105,4 +104,26 @@ h2 {
 
 #projects a {
     color: rgb(216, 235, 251, 0.9);
+}
+
+#year {
+    position: fixed;
+    justify-self: right;
+}
+
+#timeline {
+    width: 0.5%;
+    height: 100%;
+    background-color: rgb(216, 235, 251, 0.9);
+    position: fixed;
+    top: 0;
+    right: 1cm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#timeline p {
+    position:absolute; 
+    right: 1vw;
 }
