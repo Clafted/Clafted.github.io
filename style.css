@@ -93,6 +93,7 @@ h1, h2, h3, p {
     margin: 0;
     margin-bottom: 3mm;
     padding: 0;
+    text-shadow: 0 0.5mm 0 rgb(10, 19, 45);
 }
 
 h1 {
@@ -129,6 +130,7 @@ div .project {
 .horizontal_line {
     height: 0.1cm;
     background-image: linear-gradient(to right, rgb(138, 197, 245), rgb(216, 235, 251), rgb(138, 197, 245));
+    box-shadow: 0 1mm 0mm rgb(43, 61, 77), 0 2mm 2mm black;
 }
 
 .project img, .project video {
