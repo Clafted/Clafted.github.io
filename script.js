@@ -2,8 +2,7 @@ let scrollval = 100.0;
 let prevY = 0.0;
 let id;
 let op = 0.0;
-
-
+let highlightProject = null;
 
 function scroll() {
 
@@ -21,11 +20,15 @@ function scroll() {
     // Timeline animations
     var rect;
     var targetYear;
-    for (let div of document.getElementById("projects").children) {
-        if (div.nodeName != "DIV") continue;
-        rect = div.getBoundingClientRect();
-        if (screen.height * 0.5 >= rect.y && rect.y >= -(+rect.height)) {
-            targetYear = div.className;
+    var offset = window.innerHeight*0.25;
+    const projects = document.getElementsByClassName("project");
+    for (let p of projects) {
+        rect = p.getBoundingClientRect();
+        if (highlightProject != p && offset >= rect.y && rect.y >= -1*(rect.height-offset)) {
+            highlightProject.style.backgroundColor = "rgba(100,100,100,0)";
+            highlightProject = p;
+            highlightProject.style.backgroundColor = "rgba(100, 100, 100, 0.5)";
+            targetYear = p.className;
         }
     }
     for (let yearDiv of document.getElementById("timeline").children) {
@@ -46,10 +49,17 @@ function fadeIn(element) {
     
 }
 
+function s(e) {
+    console.log(e.currentTarget.getBoundingClientRect().y);
+}
+
 function load() {
-    var main = document.getElementById("main");
-    main.opacity = 0.0;
+    const main = document.querySelector(".main");
+    main.style.opacity = 0.0;
     id = setInterval(fadeIn, 10, main);
+
+    highlightProject = document.getElementsByClassName("project")[0];
+    highlightProject.style.backgroundColor = "rgba(100, 100, 100, 0.5)";
 }
 
 window.onscroll = scroll;

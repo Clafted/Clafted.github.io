@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     border: 0;
+    scrollbar-color: rgb(18, 92, 161) rgb(10, 39, 61);
 }
 
 body {
@@ -125,6 +126,7 @@ h3 {
 div .project {
     padding: 1cm;
     text-align: justify;
+    transition: background-color 0.5s;
 }
 
 .horizontal_line {
